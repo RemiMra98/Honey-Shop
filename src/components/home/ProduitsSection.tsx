@@ -115,7 +115,6 @@ export default function ProduitsSection() {
               ))
             ) : (
               <div className="col-span-4 text-center py-16">
-                <div className="text-5xl mb-4">🌱</div>
                 <p className="text-dark/40 font-playfair italic">
                   Cette saison est en repos. Découvrez nos autres miels.
                 </p>

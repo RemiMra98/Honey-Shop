@@ -13,6 +13,7 @@ export interface Product {
   region: string;
   floralNotes: string[];
   color: string;
+  imageUrl: string;
   weightOptions: WeightOption[];
   harvestMonth: number;
   harvestSeason: 'printemps' | 'ete' | 'automne' | 'hiver';
@@ -72,6 +73,7 @@ export const products: Product[] = [
     region: 'Provence',
     floralNotes: ['Pissenlit', 'Cerisier', 'Acacia', 'Trèfle'],
     color: '#F5C842',
+    imageUrl: 'https://images.unsplash.com/photo-1558642891-54be180ea339?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 12 },
       { weight: '500g', price: 22 },
@@ -95,6 +97,7 @@ export const products: Product[] = [
     region: 'Alpes',
     floralNotes: ['Thym sauvage', 'Serpolet', 'Romarin', 'Lavande'],
     color: '#C8920D',
+    imageUrl: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 15 },
       { weight: '500g', price: 28 },
@@ -118,6 +121,7 @@ export const products: Product[] = [
     region: 'Ardèche',
     floralNotes: ['Châtaignier', 'Fougère', 'Sous-bois'],
     color: '#5C2E00',
+    imageUrl: 'https://images.unsplash.com/photo-1471943038054-fd4a07d1a7c0?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 14 },
       { weight: '500g', price: 26 },
@@ -141,6 +145,7 @@ export const products: Product[] = [
     region: 'Provence',
     floralNotes: ['Lavande vraie', 'Sauge', 'Romarin', 'Thym'],
     color: '#9B7FD4',
+    imageUrl: 'https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 18 },
       { weight: '500g', price: 34 },
@@ -164,6 +169,7 @@ export const products: Product[] = [
     region: 'Vosges',
     floralNotes: ['Sapin', 'Épicéa', 'Chêne', 'Hêtre'],
     color: '#3D1F00',
+    imageUrl: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 13 },
       { weight: '500g', price: 24 },
@@ -187,6 +193,7 @@ export const products: Product[] = [
     region: 'Drôme',
     floralNotes: ['Robinier', 'Tilleul', 'Trèfle blanc'],
     color: '#FFF3C0',
+    imageUrl: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 16 },
       { weight: '500g', price: 30 },
@@ -210,6 +217,7 @@ export const products: Product[] = [
     region: 'Vaucluse',
     floralNotes: ['Thym', 'Sarriette', 'Origan sauvage', 'Ciste'],
     color: '#E8A020',
+    imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 20 },
       { weight: '500g', price: 38 },
@@ -233,6 +241,7 @@ export const products: Product[] = [
     region: 'Multi-terroirs',
     floralNotes: ['Toutes fleurs', 'Printemps', 'Été', 'Polyfloral'],
     color: '#F5E6A3',
+    imageUrl: 'https://images.unsplash.com/photo-1568051243851-f9b136146e97?w=600&h=600&fit=crop&q=85&auto=format',
     weightOptions: [
       { weight: '250g', price: 11 },
       { weight: '500g', price: 20 },

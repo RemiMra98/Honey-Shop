@@ -74,7 +74,6 @@ export default function BoutiqueClient() {
           className="relative z-10 max-w-3xl mx-auto"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-honey/15 border border-honey/25 text-honey text-xs font-semibold tracking-widest uppercase mb-6">
-            <span>🍯</span>
             Notre collection
           </div>
           <h1 className="font-playfair text-4xl md:text-6xl font-bold text-cream mb-4 leading-tight">
@@ -233,7 +232,6 @@ export default function BoutiqueClient() {
               </div>
             ) : (
               <div className="text-center py-20">
-                <div className="text-5xl mb-4">🌱</div>
                 <h3 className="font-playfair text-xl font-bold text-dark mb-2">
                   Aucun miel pour cette sélection
                 </h3>
