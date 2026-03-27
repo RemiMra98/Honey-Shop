@@ -179,7 +179,7 @@ export default function Footer() {
             {/* Certif badge */}
             <div className="mt-6 p-3 rounded-xl bg-honey/8 border border-honey/15">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-base">🌿</span>
+                <Leaf size={13} className="text-honey flex-shrink-0" />
                 <span className="text-xs font-semibold text-honey">Certifié Bio</span>
               </div>
               <p className="text-xs text-cream/40 leading-relaxed">

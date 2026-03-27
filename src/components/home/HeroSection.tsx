@@ -233,7 +233,6 @@ export default function HeroSection() {
             href="/adoption-ruche"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-cream border-2 border-honey/50 bg-transparent backdrop-blur-sm hover:border-honey hover:bg-honey/10 transition-all duration-300 hover:-translate-y-1"
           >
-            <span>🐝</span>
             Adopter une ruche
           </Link>
         </motion.div>

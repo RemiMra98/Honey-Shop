@@ -46,7 +46,6 @@ export default function TableAccordSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-honey/15 border border-honey/25 text-honey text-xs font-semibold tracking-widest uppercase mb-5"
           >
-            <span>🍷</span>
             Art de la table
           </motion.div>
 
@@ -111,11 +110,6 @@ export default function TableAccordSection() {
                         'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.4) 0%, transparent 50%)',
                     }}
                   />
-
-                  {/* Big emoji */}
-                  <div className="absolute bottom-3 right-4 text-4xl opacity-80 group-hover:scale-110 transition-transform duration-300">
-                    {pairing.icon}
-                  </div>
 
                   {/* Category badge */}
                   <div className="absolute top-3 left-3">

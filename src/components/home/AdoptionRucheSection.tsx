@@ -35,7 +35,6 @@ export default function AdoptionRucheSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-honey/15 border border-honey/25 text-honey text-xs font-semibold tracking-widest uppercase mb-6"
           >
-            <span>🐝</span>
             Programme exclusif
           </motion.div>
 
@@ -104,9 +103,8 @@ export default function AdoptionRucheSection() {
               )}
 
               <div className={`p-8 ${tier.featured ? 'pt-10' : ''}`}>
-                {/* Icon & name */}
+                {/* Name */}
                 <div className="mb-6">
-                  <div className="text-4xl mb-3">{tier.icon}</div>
                   <h3 className="font-playfair text-xl font-bold text-cream mb-1">
                     {tier.name}
                   </h3>
@@ -171,8 +169,7 @@ export default function AdoptionRucheSection() {
           className="text-center"
         >
           <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-honey/8 border border-honey/15 text-cream/50 text-sm">
-            <span>📜</span>
-            Un certificat d'adoption personnalisé vous sera envoyé dans les 48h
+            Un certificat d&apos;adoption personnalisé vous sera envoyé dans les 48h
           </div>
         </motion.div>
       </div>

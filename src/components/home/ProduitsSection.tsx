@@ -9,11 +9,11 @@ import { products } from '@/lib/data';
 
 type Season = 'tous' | 'printemps' | 'ete' | 'automne';
 
-const seasons: { key: Season; label: string; emoji: string }[] = [
-  { key: 'tous', label: 'Toutes les variétés', emoji: '🍯' },
-  { key: 'printemps', label: 'Printemps', emoji: '🌸' },
-  { key: 'ete', label: 'Été', emoji: '☀️' },
-  { key: 'automne', label: 'Automne', emoji: '🍂' },
+const seasons: { key: Season; label: string }[] = [
+  { key: 'tous', label: 'Toutes les variétés' },
+  { key: 'printemps', label: 'Printemps' },
+  { key: 'ete', label: 'Été' },
+  { key: 'automne', label: 'Automne' },
 ];
 
 export default function ProduitsSection() {
@@ -41,7 +41,6 @@ export default function ProduitsSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-honey/8 border border-honey/15 text-honey-deeper text-xs font-semibold tracking-widest uppercase mb-5"
           >
-            <span>🌻</span>
             Nos productions
           </motion.div>
 
@@ -95,7 +94,6 @@ export default function ProduitsSection() {
                   : 'bg-cream text-dark/60 hover:bg-honey/10 hover:text-dark'
               }`}
             >
-              <span>{season.emoji}</span>
               {season.label}
             </button>
           ))}
