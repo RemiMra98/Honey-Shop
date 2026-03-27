@@ -77,7 +77,6 @@ body {
 }
 
 @layer utilities {
-  /* Hexagon clip-path */
   .hexagon {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
@@ -86,7 +85,6 @@ body {
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   }
 
-  /* Gradient text */
   .text-gradient-honey {
     background: var(--gradient-honey);
     -webkit-background-clip: text;
@@ -101,7 +99,6 @@ body {
     background-clip: text;
   }
 
-  /* Honey drip effect */
   .honey-drip-container {
     position: relative;
     overflow: hidden;
@@ -120,7 +117,6 @@ body {
     animation: drip 2s ease-in infinite;
   }
 
-  /* Glass morphism */
   .glass {
     background: rgba(255, 248, 231, 0.1);
     backdrop-filter: blur(12px);
@@ -135,7 +131,6 @@ body {
     border: 1px solid rgba(212, 160, 23, 0.2);
   }
 
-  /* Shimmer effect */
   .shimmer {
     background: linear-gradient(
       90deg,
@@ -147,7 +142,6 @@ body {
     animation: shimmer 3s linear infinite;
   }
 
-  /* Card hover lift */
   .card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -157,7 +151,6 @@ body {
     box-shadow: 0 20px 40px rgba(212, 160, 23, 0.2);
   }
 
-  /* Honey border gradient */
   .border-honey-gradient {
     border: 2px solid transparent;
     background-clip: padding-box;
@@ -173,7 +166,6 @@ body {
     z-index: -1;
   }
 
-  /* Text stroke */
   .text-stroke-honey {
     -webkit-text-stroke: 1px var(--honey);
     color: transparent;
@@ -209,7 +201,6 @@ body {
   }
 }
 
-/* Honey drip SVG animation at bottom of sections */
 .drip-bottom {
   position: absolute;
   bottom: -1px;
@@ -219,7 +210,6 @@ body {
   overflow: hidden;
 }
 
-/* Staggered animation delays */
 .animate-delay-100 { animation-delay: 100ms; }
 .animate-delay-200 { animation-delay: 200ms; }
 .animate-delay-300 { animation-delay: 300ms; }
@@ -229,14 +219,12 @@ body {
 .animate-delay-700 { animation-delay: 700ms; }
 .animate-delay-800 { animation-delay: 800ms; }
 
-/* Particle styles */
 .particle {
   position: absolute;
   pointer-events: none;
   opacity: 0.6;
 }
 
-/* Typography defaults */
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', Georgia, serif;
 }
