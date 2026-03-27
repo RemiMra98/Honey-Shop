@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Honey palette */
+  --honey-light: #F5C842;
+  --honey: #D4A017;
+  --honey-dark: #E8A020;
+  --honey-deeper: #C8920D;
+
+  /* Amber */
+  --amber-warm: #8B4513;
+  --amber-deep: #6B3410;
+
+  /* Cream */
+  --cream-light: #FFFBF0;
+  --cream: #FFF8E7;
+  --cream-warm: #FEF3C7;
+
+  /* Forest */
+  --forest-light: #3A6B1A;
+  --forest: #2D5016;
+  --forest-deep: #1A3009;
+
+  /* Dark */
+  --dark-light: #2D2D2D;
+  --dark: #1A1A1A;
+
+  /* Gradients */
+  --gradient-honey: linear-gradient(135deg, #C8920D 0%, #D4A017 30%, #F5C842 60%, #E8A020 100%);
+  --gradient-hero: linear-gradient(160deg, #1A0A00 0%, #2D1500 25%, #3D1F00 50%, #5C2E00 75%, #8B4513 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--dark);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--honey);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--honey-deeper);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--honey-light);
+  color: var(--amber-deep);
+}
+
+@layer utilities {
+  /* Hexagon clip-path */
+  .hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .hexagon-lg {
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  }
+
+  /* Gradient text */
+  .text-gradient-honey {
+    background: var(--gradient-honey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-forest {
+    background: linear-gradient(135deg, #3A6B1A, #2D5016);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Honey drip effect */
+  .honey-drip-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .honey-drip::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 20px;
+    background: var(--honey);
+    border-radius: 0 0 50% 50%;
+    animation: drip 2s ease-in infinite;
+  }
+
+  /* Glass morphism */
+  .glass {
+    background: rgba(255, 248, 231, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 248, 231, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(26, 10, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 160, 23, 0.2);
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(245, 200, 66, 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(212, 160, 23, 0.2);
+  }
+
+  /* Honey border gradient */
+  .border-honey-gradient {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+
+  .border-honey-gradient::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--gradient-honey);
+    z-index: -1;
+  }
+
+  /* Text stroke */
+  .text-stroke-honey {
+    -webkit-text-stroke: 1px var(--honey);
+    color: transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-honey text-dark font-semibold rounded-full transition-all duration-300 hover:bg-honey-light hover:shadow-lg hover:shadow-honey/30 hover:-translate-y-0.5 active:translate-y-0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-honey text-honey font-semibold rounded-full transition-all duration-300 hover:bg-honey hover:text-dark hover:shadow-lg hover:shadow-honey/30 hover:-translate-y-0.5;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-honey font-semibold rounded-full transition-all duration-300 hover:bg-honey/10;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .section-title {
+    @apply font-playfair text-4xl md:text-5xl font-bold text-dark leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-inter text-lg text-dark/60 leading-relaxed;
+  }
+
+  .product-card {
+    @apply relative bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-honey/20;
+  }
+}
+
+/* Honey drip SVG animation at bottom of sections */
+.drip-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  overflow: hidden;
+}
+
+/* Staggered animation delays */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+.animate-delay-800 { animation-delay: 800ms; }
+
+/* Particle styles */
+.particle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+p, span, a, button, input, label {
+  font-family: 'Inter', system-ui, sans-serif;
+}
